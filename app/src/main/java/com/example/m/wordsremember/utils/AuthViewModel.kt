@@ -7,7 +7,7 @@ import android.provider.ContactsContract
 import com.example.m.wordsremember.model.User
 
 
-class LoginViewModel : ViewModel() {
+class AuthViewModel : ViewModel() {
 
     private var userData: MutableLiveData<User>? = null
     private var loginData: MutableLiveData<User>? = null

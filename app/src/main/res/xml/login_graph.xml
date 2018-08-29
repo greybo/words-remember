@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/login_fragment">
+    app:startDestination="@id/loading_fragment">
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.example.m.wordsremember.ui.login.LoginFragment"
@@ -19,6 +19,18 @@
         tools:layout="@layout/sign_up_fragment">
         <action
             android:id="@+id/action_sign_up_fragment_to_login_fragment"
+            app:destination="@id/sign_up_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loading_fragment"
+        android:name="com.example.m.wordsremember.ui.login.LoadingFragment"
+        android:label="fragment2"
+        tools:layout="@layout/loading_fragment">
+        <action
+            android:id="@+id/action_loading_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+        <action
+            android:id="@+id/action_loading_fragment_to_sign_up_fragment"
             app:destination="@id/sign_up_fragment" />
     </fragment>
 
